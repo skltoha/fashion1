@@ -92,8 +92,8 @@ body {
   gap: 10px;
 }
 .header-right ul li a {
+  text-transform: uppercase;
   color: var(--color-nav-menu);
-  font-size: 14px;
 }
 .mobile-menu {
   display: none;
