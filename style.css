@@ -1,0 +1,357 @@
+:root {
+  --color-bg-1: #ffffff;
+  --color-nav-menu: #22262a;
+  --color-footer-bg: #f2f8fc;
+  --color-footer-copy-bg: #e7f5f8;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  --max-width: 1148px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+}
+/* button style start */
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-black-white {
+  color: var(--color-nav-menu);
+  background-color: var(--color-bg-1);
+}
+.btn-white-black {
+  color: var(--color-bg-1);
+  background-color: var(--color-nav-menu);
+}
+/* button style end */
+/* fashion-header start */
+.fashion-header {
+}
+.menu-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.header-logo {
+  width: 10%;
+}
+.header-nav {
+}
+.header-nav ul {
+  display: flex;
+}
+.header-nav ul li {
+  padding: 0px 5px;
+}
+.header-nav ul li a {
+  text-transform: uppercase;
+  color: var(--color-nav-menu);
+  padding: 10px 15px;
+}
+.header-nav ul li a:hover {
+  background-color: red;
+}
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* fashion-header end */
+/* hero-section start */
+.hero-section {
+  position: relative;
+}
+.background-img {
+  margin: 0;
+}
+.background-img img {
+  width: 100%;
+}
+.hero-content {
+  position: absolute;
+  bottom: 10%;
+  left: min(calc(100vw - 30%), 55vw);
+}
+.content-text {
+}
+.content-text h3 {
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1vw, 2rem);
+  font-weight: 400;
+}
+.content-text h1 {
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+.content-text p {
+  margin-bottom: 20px;
+  font-size: clamp(0.8rem, 1vw, 2rem);
+}
+.content-btn {
+}
+/* hero-section end */
+/* info-section start */
+.info-section {
+  margin: 20px auto;
+}
+.info-boxes {
+  box-sizing: border-box;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "one"
+    "three"
+    "four"
+    "two";
+}
+.info-box:nth-child(1) {
+  grid-area: one;
+}
+.info-box:nth-child(2) {
+  position: relative;
+  grid-area: two;
+}
+.info-box:nth-child(3) {
+  grid-area: three;
+}
+.info-box:nth-child(4) {
+  grid-area: four;
+}
+
+.info-box:nth-child(2) a {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+@media (min-width: 588px) {
+  .info-boxes {
+    grid-template-areas:
+      "one one two two"
+      "three four two two" !important;
+    margin: 100px auto !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .info-boxes {
+    grid-template-areas:
+      "one one"
+      "three four"
+      "two two";
+    margin: 10px auto;
+  }
+}
+/* info-section end */
+
+/* fashion category start */
+.fashion-category {
+}
+.women-section {
+  padding-bottom: 100px;
+}
+.men-section {
+}
+.group-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.group-text h2 {
+}
+.group-text p {
+}
+.group-box {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.box {
+}
+.box-img {
+}
+.box-img img {
+}
+.box-text {
+  padding: 10px 0px;
+}
+.box-text h4 {
+  font-size: 12px;
+  font-weight: 100;
+}
+.box-text h3:nth-child(2) {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0px;
+}
+.box-text h3:nth-child(3) {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: line-through;
+  display: inline-block;
+}
+.box-text h3:nth-child(4) {
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+  display: inline-block;
+}
+/* Group-box end */
+/* style section start */
+.style-section {
+  margin: 100px 0px;
+}
+/* style section end */
+/* collection section start */
+.collection-section {
+  position: relative;
+}
+.collection-content {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+}
+/* collection section end */
+
+/* footer section start */
+.footer-section {
+  margin-top: -4px;
+}
+.footer-top {
+  background-color: var(--color-footer-bg);
+  padding: 110px 0px;
+}
+.footer-area {
+  display: flex;
+}
+.contact-area {
+  width: 50%;
+}
+.footer-logo {
+  padding-bottom: 30px;
+  width: 150px;
+}
+.footer-logo img {
+  background-color: var(--color-nav-menu);
+}
+.contact-text {
+}
+.contact-text p:nth-child(1) {
+  width: 70%;
+  padding-bottom: 50px;
+}
+.contact-text p:nth-child(2) {
+  padding-bottom: 20px;
+}
+.contact-text p:nth-child(3) {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 5px;
+}
+.contact-text p:nth-child(4) {
+}
+.social-area {
+  padding-top: 20px;
+}
+.social-area ul {
+  display: flex;
+  gap: 10px;
+}
+.social-area ul li {
+}
+.social-area ul li a {
+}
+.utility-area {
+  width: 50%;
+}
+.utility-header {
+}
+.utility-header h2 {
+  padding: 10px 0px;
+}
+.join-section {
+  display: flex;
+  justify-content: space-between;
+}
+.join-section input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  padding: 0px 10px;
+}
+.join-section input::placeholder {
+  color: var(--color-nav-menu);
+  font-size: 14px;
+}
+.join-section button {
+  width: 20%;
+  height: 40px;
+  background-color: var(--color-bg-1);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.utility-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.u-group {
+}
+.u-group h2 {
+  text-transform: uppercase;
+  padding: 20px 0px;
+}
+.u-group ul {
+  line-height: 30px;
+}
+.u-group ul li {
+}
+.u-group ul li a {
+  font-weight: 200;
+  color: var(--color-nav-menu);
+}
+.footer-bottom {
+  background-color: var(--color-footer-copy-bg);
+  padding: 20px 0px;
+  text-align: center;
+}
+.footer-bottom h2 {
+  font-size: 14px;
+}
+/* footer section end */
