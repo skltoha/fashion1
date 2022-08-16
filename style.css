@@ -87,11 +87,32 @@ body {
 .header-nav ul li a:hover {
   background-color: red;
 }
-.header-right {
+.header-right ul {
   display: flex;
   gap: 10px;
 }
-
+.header-right ul li a {
+  color: var(--color-nav-menu);
+  font-size: 14px;
+}
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .header-nav {
+    display: none;
+  }
+  .header-right {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .menu-area {
+    padding: 10px 20px;
+  }
+}
 /* fashion-header end */
 /* hero-section start */
 .hero-section {
@@ -256,12 +277,7 @@ body {
   background-color: var(--color-footer-bg);
   padding: 110px 0px;
 }
-.footer-area {
-  display: flex;
-}
-.contact-area {
-  width: 50%;
-}
+
 .footer-logo {
   padding-bottom: 30px;
   width: 150px;
@@ -270,6 +286,7 @@ body {
   background-color: var(--color-nav-menu);
 }
 .contact-text {
+  padding-bottom: 30px;
 }
 .contact-text p:nth-child(1) {
   width: 70%;
@@ -296,9 +313,7 @@ body {
 }
 .social-area ul li a {
 }
-.utility-area {
-  width: 50%;
-}
+
 .utility-header {
 }
 .utility-header h2 {
@@ -353,5 +368,17 @@ body {
 }
 .footer-bottom h2 {
   font-size: 14px;
+}
+
+@media (min-width: 800px) {
+  .footer-area {
+    display: flex;
+  }
+  .contact-area {
+    width: 50%;
+  }
+  .utility-area {
+    width: 50%;
+  }
 }
 /* footer section end */
