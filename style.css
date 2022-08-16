@@ -85,7 +85,7 @@ body {
   padding: 10px 15px;
 }
 .header-nav ul li a:hover {
-  background-color: red;
+  background-color: var(--color-footer-copy-bg);
 }
 .header-right ul {
   display: flex;
@@ -94,6 +94,10 @@ body {
 .header-right ul li a {
   text-transform: uppercase;
   color: var(--color-nav-menu);
+  padding: 10px 15px;
+}
+.header-right ul li a:hover {
+  background-color: var(--color-footer-copy-bg);
 }
 .mobile-menu {
   display: none;
